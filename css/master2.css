@@ -1,0 +1,274 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #b2bfd5;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+.header {
+    background: #2C3E50; 
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+.navbar ul {
+    padding: 0;
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.navbar ul li a:hover {
+    color: #1ABC9C;  
+}
+
+/* Welcome Section */
+.welcome-section {
+    background: url('../images/clinic-bg.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00030a;
+    text-align: center;
+}
+
+.welcome-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 1.2em;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #1ABC9C;  
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #16A085;  
+}
+
+
+.about-section {
+    padding: 40px 0;
+    background: #8fdbe8;
+    text-align: center;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #7f8c8d;  
+}
+
+.doctor-image {
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+/* Services Section */
+.services-section {
+    background: #2b393d; 
+    padding: 40px 0;
+}
+
+.services-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #056ed6; 
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.service-item {
+    background: #92dee8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-item h3 {
+    margin-bottom: 15px;
+    color: #0269cf;  
+}
+
+/* Booking Section */
+.booking-section {
+    background: #afe1fa;
+    padding: 40px 0;
+}
+
+.booking-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2C3E50;  
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #2C3E50; 
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e7a0a0;
+    border-radius: 5px;
+}
+
+button.cta-button {
+    width: 100%;
+    padding: 10px;
+    background: #1ABC9C; 
+    border: none;
+    color: #040000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.cta-button:hover {
+    background: #16A085;  
+}
+
+/* Footer */
+.footer {
+    background: #2C3E50; 
+    text-align: center;
+    padding: 10px 0;
+}
+/* General Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes linkHover {
+    0% {
+        color: #fff;
+        transform: scale(1);
+    }
+    50% {
+        color: #1ABC9C;
+        transform: scale(1.1);
+    }
+    100% {
+        color: #fff;
+        transform: scale(1);
+    }
+}
+
+/* Images */
+.doctor-image {
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+    animation: zoomIn 1s ease-in-out;
+}
+
+/* Links */
+.navbar ul li a {
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #1ABC9C;
+    transform: scale(1.1);
+    animation: linkHover 0.6s ease-in-out;
+}
+.zoom-container {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.zoom-container img {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.zoom-container:hover img {
+    transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -o-transform: scale(1.4);
+}
+
